@@ -1,10 +1,9 @@
 ﻿using Chen.Helpers.CollectionHelpers;
-using TILER2;
 using UnityEngine;
 
 namespace Chen.GradiusMod.Artifacts.Machines
 {
-    public partial class Machines : Artifact<Machines>
+    public partial class Machines : ArtifactBase<Machines>
     {
         /// <summary>
         /// Adds a drone to the spawn pool for the enemies.

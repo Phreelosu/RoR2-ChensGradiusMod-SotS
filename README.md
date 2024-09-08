@@ -1,9 +1,3 @@
-![Version](https://img.shields.io/badge/Version-3.5.4-orange)
-[![GitHub issues](https://img.shields.io/github/issues/cheeeeeeeeeen/RoR2-ChensGradiusMod)](https://github.com/cheeeeeeeeeen/RoR2-ChensGradiusMod/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/cheeeeeeeeeen/RoR2-ChensGradiusMod)](https://github.com/cheeeeeeeeeen/RoR2-ChensGradiusMod/pulls)
-[![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
-![Maintenance Status](https://img.shields.io/badge/Maintenance-Inactive-orange)
-
 ![RoR2: Chen's Gradius Mod](https://i.imgur.com/yIMFu24.png)
 
 ## Description
@@ -95,6 +89,9 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 
 ## More Information
 
+**Phreelosu** continued to maintain the mod in working order for the latest updates (as of September 1, 2024).
+- Contact: [GitHub Account](https://github.com/Phreelosu)
+
 **Kirbsuke#0352** made the 3D model for the Option/Multiple, and later used for the icon.
 - Contact: `kirbydamaster@gmail.com` or through Discord.
 
@@ -105,6 +102,13 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 - Contact: Through Discord.
 
 ## Changelog
+
+**3.6.0**
+- Added Option Seed support for Railgunner, Void Fiend, Seeker, Chef and False Son
+
+**3.5.5**
+- Initial fixes for SotS, you can ignore the startup errors of TILER2, wont break anything ingame
+- Temporarily disabled Artifact of Machines until TILER2's artifacts are fixed
 
 **3.5.4**
 - Recompile for TILER2's breaking changes.

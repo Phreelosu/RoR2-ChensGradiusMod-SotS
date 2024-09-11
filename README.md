@@ -1,3 +1,7 @@
+![Version](https://img.shields.io/badge/Version-3.5.4-orange)
+[![GitHub issues](https://img.shields.io/github/issues/cheeeeeeeeeen/RoR2-ChensGradiusMod)](https://github.com/cheeeeeeeeeen/RoR2-ChensGradiusMod/issues)
+![Maintenance Status](https://img.shields.io/badge/Maintenance-Active-green)
+
 ![RoR2: Chen's Gradius Mod](https://i.imgur.com/yIMFu24.png)
 
 ## Description

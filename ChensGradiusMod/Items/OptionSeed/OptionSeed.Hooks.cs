@@ -101,6 +101,7 @@ namespace Chen.GradiusMod.Items.OptionSeed
             On.EntityStates.Chef.Glaze.OnEnter += Glaze_OnEnter;
             On.EntityStates.FalseSon.LunarSpikes.OnEnter += LunarSpikes_OnEnter;
             On.EntityStates.FalseSon.LunarSpikesShotgun.OnEnter += LunarSpikesShotgun_OnEnter;
+            
 #if DEBUG
             On.EntityStates.EntityState.OnEnter += EntityState_OnEnter;
 #endif

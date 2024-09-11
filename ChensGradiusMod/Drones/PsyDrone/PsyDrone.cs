@@ -86,6 +86,8 @@ namespace Chen.GradiusMod.Drones.PsyDrone
             LanguageAPI.Add("PSI_BIT_NAME", "Psy Drone");
             LanguageAPI.Add("PSI_BIT_CONTEXT", "Repair Psy Drones");
             LanguageAPI.Add("PSI_BIT_INTERACTABLE_NAME", "Broken Psy Drones");
+            LanguageAPI.Add("PSI_BIT_INTERACTABLE_INSPECT", "Expensive twin drones, each of them has unique laser attacks. Be careful, if one of them is decommissioned, the other will be as well.");
+            LanguageAPI.Add("PSI_BIT_INTERACTABLE_TITLE", "Broken Psy Drones");
         }
 
         private void ModifyBrokenObject()
@@ -111,6 +113,13 @@ namespace Chen.GradiusMod.Drones.PsyDrone
             purchaseInteraction.Networkcost = purchaseInteraction.cost;
             purchaseInteraction.contextToken = "PSI_BIT_CONTEXT";
             purchaseInteraction.displayNameToken = "PSI_BIT_INTERACTABLE_NAME";
+            var inspect = ScriptableObject.CreateInstance<InspectDef>();
+            var info = inspect.Info = new RoR2.UI.InspectInfo();
+            info.DescriptionToken = "PSI_BIT_INTERACTABLE_INSPECT";
+            info.TitleToken = "PSI_BIT_INTERACTABLE_TITLE";
+            inspect.Info = info;
+            var giip = brokenObject.gameObject.AddComponent<GenericInspectInfoProvider>();
+            giip.InspectInfo = inspect;
             GenericDisplayNameProvider nameProvider = brokenObject.GetComponent<GenericDisplayNameProvider>();
             nameProvider.displayToken = "PSI_BIT_NAME";
             GameObject customBrokenModel = assetBundle.LoadAsset<GameObject>("Assets/Drones/PsiBits/Model/mdlPsiBitsBroken.prefab");

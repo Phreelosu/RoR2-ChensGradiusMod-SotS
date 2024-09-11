@@ -105,6 +105,8 @@ namespace Chen.GradiusMod.Drones.BeamDrone
             LanguageAPI.Add("LASER_DRONE1_NAME", "Beam Drone");
             LanguageAPI.Add("LASER_DRONE1_CONTEXT", "Repair Beam Drone");
             LanguageAPI.Add("LASER_DRONE1_INTERACTABLE_NAME", "Broken Beam Drone");
+            LanguageAPI.Add("LASER_DRONE1_INTERACTABLE_INSPECT", "Inconsistent at aiming, but powerful drone. Shoots continous laser beam on it's target.");
+            LanguageAPI.Add("LASER_DRONE1_INTERACTABLE_TITLE", "Broken Beam Drone");
         }
 
         private void ModifyBrokenObject()
@@ -124,6 +126,13 @@ namespace Chen.GradiusMod.Drones.BeamDrone
             purchaseInteraction.Networkcost = purchaseInteraction.cost;
             purchaseInteraction.contextToken = "LASER_DRONE1_CONTEXT";
             purchaseInteraction.displayNameToken = "LASER_DRONE1_INTERACTABLE_NAME";
+            var inspect = ScriptableObject.CreateInstance<InspectDef>();
+            var info = inspect.Info = new RoR2.UI.InspectInfo();
+            info.DescriptionToken = "LASER_DRONE1_INTERACTABLE_INSPECT";
+            info.TitleToken = "LASER_DRONE1_INTERACTABLE_TITLE";
+            inspect.Info = info;
+            var giip = brokenObject.gameObject.AddComponent<GenericInspectInfoProvider>();
+            giip.InspectInfo = inspect;
             GenericDisplayNameProvider nameProvider = brokenObject.GetComponent<GenericDisplayNameProvider>();
             nameProvider.displayToken = "LASER_DRONE1_NAME";
             GameObject customBrokenModel = assetBundle.LoadAsset<GameObject>("Assets/Drones/LaserDrone1/Model/mdlBeamDroneBroken.prefab");

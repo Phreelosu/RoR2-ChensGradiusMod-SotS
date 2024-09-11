@@ -105,8 +105,6 @@ namespace Chen.GradiusMod.Drones.LaserDrone
             LanguageAPI.Add("LASER_DRONE2_NAME", "Laser Drone");
             LanguageAPI.Add("LASER_DRONE2_CONTEXT", "Repair Laser Drone");
             LanguageAPI.Add("LASER_DRONE2_INTERACTABLE_NAME", "Broken Laser Drone");
-            LanguageAPI.Add("LASER_DRONE2_INTERACTABLE_INSPECT", "A drone that charges for a short amount of time, and then unleashes a strong laser attack, dealing huge amount of damage in an AoE.");
-            LanguageAPI.Add("LASER_DRONE2_INTERACTABLE_TITLE", "Broken Laser Drone");
         }
 
         private void ModifyBrokenObject()
@@ -126,13 +124,6 @@ namespace Chen.GradiusMod.Drones.LaserDrone
             purchaseInteraction.Networkcost = purchaseInteraction.cost;
             purchaseInteraction.contextToken = "LASER_DRONE2_CONTEXT";
             purchaseInteraction.displayNameToken = "LASER_DRONE2_INTERACTABLE_NAME";
-            var inspect = ScriptableObject.CreateInstance<InspectDef>();
-            var info = inspect.Info = new RoR2.UI.InspectInfo();
-            info.DescriptionToken = "LASER_DRONE2_INTERACTABLE_INSPECT";
-            info.TitleToken = "LASER_DRONE2_INTERACTABLE_TITLE";
-            inspect.Info = info;
-            var giip = brokenObject.gameObject.AddComponent<GenericInspectInfoProvider>();
-            giip.InspectInfo = inspect;
             GenericDisplayNameProvider nameProvider = brokenObject.GetComponent<GenericDisplayNameProvider>();
             nameProvider.displayToken = "LASER_DRONE2_NAME";
             GameObject customBrokenModel = assetBundle.LoadAsset<GameObject>("Assets/Drones/LaserDrone2/Model/mdlLaserDroneBroken.prefab");
@@ -227,9 +218,9 @@ namespace Chen.GradiusMod.Drones.LaserDrone
         private void ModifyInteractableSpawnCard()
         {
             iSpawnCard.name = $"iscBroken{name}";
+            iSpawnCard.orientToFloor = true;
             iSpawnCard.prefab = brokenObject;
             iSpawnCard.slightlyRandomizeOrientation = false;
-            iSpawnCard.orientToFloor = true;
         }
 
         private void DirectorAPI_InteractableActions(DccsPool arg1, StageInfo arg2)

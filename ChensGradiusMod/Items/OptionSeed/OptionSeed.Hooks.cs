@@ -1012,6 +1012,12 @@ namespace Chen.GradiusMod.Items.OptionSeed
                         useSpeedOverride = false
                     };
                     ProjectileManager.instance.FireProjectile(fireProjectileInfo);
+                    ProjectileManager.instance.FireProjectile(fireProjectileInfo);
+                    ProjectileManager.instance.FireProjectile(fireProjectileInfo);
+                    ProjectileManager.instance.FireProjectile(fireProjectileInfo);
+                    ProjectileManager.instance.FireProjectile(fireProjectileInfo);
+                    ProjectileManager.instance.FireProjectile(fireProjectileInfo);
+                    ProjectileManager.instance.FireProjectile(fireProjectileInfo); //CHEF fires it 7 times so the seeds should as well, nice 21x glaze effect, I love balanced runs
                 }
             });
         }

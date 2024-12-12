@@ -47,7 +47,7 @@ namespace Chen.GradiusMod
         /// <summary>
         /// The version of the mod.
         /// </summary>
-        public const string ModVer = "3.6.1";
+        public const string ModVer = "3.6.3";
 
         /// <summary>
         /// The name of the mod.
@@ -74,6 +74,8 @@ namespace Chen.GradiusMod
         private static readonly Lazy<GameObject> _turret1Master = new Lazy<GameObject>(() => Resources.Load<GameObject>("prefabs/charactermasters/Turret1Master"));
         private static readonly Lazy<GameObject> _tc280DroneMaster = new Lazy<GameObject>(() => Resources.Load<GameObject>("prefabs/charactermasters/MegaDroneMaster"));
         private static readonly Lazy<GameObject> _equipmentDroneMaster = new Lazy<GameObject>(() => Resources.Load<GameObject>("prefabs/charactermasters/EquipmentDroneMaster"));
+        private static readonly Lazy<GameObject> _colDronemanMaster = new Lazy<GameObject>(() => Resources.Load<GameObject>("prefabs/charactermasters/DroneCommanderMaster"));
+        private static readonly Lazy<GameObject> _alphaConstructMaster = new Lazy<GameObject>(() => Resources.Load<GameObject>("prefabs/charactermasters/MinorConstructMaster"));
         private static readonly Lazy<GameObject> _helperPrefab = new Lazy<GameObject>(() => Resources.Load<GameObject>("SpawnCards/HelperPrefab"));
         private static readonly Lazy<InteractableSpawnCard> _drone1SpawnCard = new Lazy<InteractableSpawnCard>(() => Resources.Load<InteractableSpawnCard>("spawncards/interactablespawncard/iscBrokenDrone1"));
         private static readonly Lazy<SkillDef> _drone1Skill = new Lazy<SkillDef>(() => Resources.Load<SkillDef>("skilldefs/drone1body/Drone1BodyGun"));
@@ -88,6 +90,8 @@ namespace Chen.GradiusMod
         internal static GameObject turret1Master { get => _turret1Master.Value; }
         internal static GameObject tc280DroneMaster { get => _tc280DroneMaster.Value; }
         internal static GameObject equipmentDroneMaster { get => _equipmentDroneMaster.Value; }
+        internal static GameObject colDronemanMaster { get => _colDronemanMaster.Value; }
+        internal static GameObject alphaConstructMaster { get => _alphaConstructMaster.Value; }
         internal static GameObject helperPrefab { get => _helperPrefab.Value; }
         internal static InteractableSpawnCard drone1SpawnCard { get => _drone1SpawnCard.Value; }
         internal static SkillDef drone1Skill { get => _drone1Skill.Value; }
@@ -189,6 +193,8 @@ namespace Chen.GradiusMod
             backupDroneMaster.SetAllDriversToAimTowardsEnemies();
             flameDroneMaster.SetAllDriversToAimTowardsEnemies();
             equipmentDroneMaster.SetAllDriversToAimTowardsEnemies();
+            colDronemanMaster.SetAllDriversToAimTowardsEnemies();
+            alphaConstructMaster.SetAllDriversToAimTowardsEnemies();
         }
 
         internal static bool DebugCheck()

@@ -1,4 +1,4 @@
-﻿using BepInEx.Configuration;
+﻿/*using BepInEx.Configuration;
 using MonoMod.Cil;
 using R2API;
 using RoR2;
@@ -127,3 +127,4 @@ namespace Chen.GradiusMod.Items
 		}
 	}
 }
+*/
